@@ -2,26 +2,9 @@
 
 ## Descripción del Proyecto
 
-Este proyecto de Trabajo Final de Grado (TFG) desarrolla un sistema de predicción de resultados de partidos de tenis utilizando técnicas de Deep Learning. El sistema combina múltiples fuentes de datos para entrenar redes neuronales recurrentes (GRU) que pueden predecir tanto el ganador de un partido como las probabilidades de apuesta.
+Este proyecto de Trabajo Final de Grado (TFG) desarrolla un sistema de predicción de resultados de partidos de tenis utilizando técnicas de Deep Learning. El sistema combina múltiples fuentes de datos para entrenar redes neuronales recurrentes que pueden predecir tanto el ganador de un partido como las probabilidades ofrecidas por la casa de apuestas. 
 
-## Arquitectura del Sistema
-
-### Modelo de Red Neuronal
-
-El proyecto utiliza una arquitectura híbrida que combina:
-
-- **Redes GRU (Gated Recurrent Unit)**: Para procesar secuencias temporales de datos históricos
-- **Capas Dense**: Para procesar características contextuales del partido
-- **Arquitectura dual**: Separación de datos históricos por jugador (local/visitante)
-
-### Características del Modelo
-
-- **Input temporal**: Secuencias de 50 partidos previos por jugador
-- **Input contextual**: Rankings, superficie, tipo de torneo, etc.
-- **Output dual**: Clasificación binaria (ganador) y regresión (probabilidades)
-- **Técnicas de regularización**: Dropout, Early Stopping, Transfer Learning
-
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 ├── 1.ranking.py              # Obtención y procesamiento de rankings ATP
@@ -33,7 +16,7 @@ El proyecto utiliza una arquitectura híbrida que combina:
 └── README.md                       
 ```
 
-## 🔄 Pipeline de Datos
+## Flujo de procesamiento de los datos
 
 ### 1. Recolección de Datos (`1.ranking.py`, `2.scrapper.py`)
 
@@ -70,32 +53,16 @@ El proyecto utiliza una arquitectura híbrida que combina:
 - **Análisis temporal**: Evolución del rendimiento por período
 - **Comparación con benchmarks**: Casas de apuestas
 
-## 📈 Resultados Principales
-
-### Modelo de Clasificación
-- **Accuracy promedio**: ~65%
-- **AUC promedio**: ~67%
-- **F1-Score promedio**: ~65%
-
-### Modelo de Regresión (Probabilidades)
-- **R² promedio**: ~80%
-- **MAE promedio**: 0.065
-
-### Insights Clave
-- El modelo supera la precisión base del 50% de manera consistente
-- Mayor precisión en torneos de Grand Slam vs. torneos menores
-- Rendimiento estable a lo largo de diferentes períodos temporales
-
-## 🛠️ Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 ### ML/DL
 - **PyTorch**: Framework principal para redes neuronales
-- **Scikit-learn**: Métricas y preprocessing
+- **Scikit-learn**: Métricas y preprocesamiento
 - **NumPy/Pandas**: Manipulación de datos
 
 ### Web Scraping
 - **requests**: Peticiones HTTP
-- **cloudscraper**: Bypass de protecciones anti-bot para Matchstat
+- **cloudscraper**: Evita protecciones anti-bot para Matchstat
 - **rapidfuzz**: Matching difuso de nombres
 
 ### Visualización
@@ -106,7 +73,7 @@ El proyecto utiliza una arquitectura híbrida que combina:
 - **Sofascore API**: Principal fuente de información
 - **MatchStat API**: Datos de partidos y rankings
 
-## 🚀 Instrucciones de Uso
+## Instrucciones de Uso
 
 ### Prerrequisitos
 Necesario tener instalado Python 3.11.
@@ -132,25 +99,10 @@ pip install torch pandas numpy scikit-learn matplotlib seaborn requests cloudscr
 4. **Evaluación**:
    - Ejecutar `6.analisis_resultados.ipynb`
 
-## 🎓 Contexto Académico
-
-Este proyecto forma parte de un Trabajo Final de Grado, específicamente enfocado en:
-
-- **Machine Learning aplicado**: Implementación práctica de redes neuronales
-- **Análisis de series temporales**: Modelado de datos secuenciales
-- **Estadística deportiva**: Aplicación de métodos cuantitativos al tenis
-- **Ingeniería de datos**: Pipeline completo desde datos raw hasta modelo
-
-## 👥 Contribuciones
+## Contribuciones
 
 **Autor**: Diego Rodríguez  
-**Supervisor**: Francisco Hernando Gallego
+**Tutor**: Francisco Hernando Gallego
 **Institución**: Universidad de Valladolid
-
-## 🔗 Referencias
-
-- **Datos**: MatchStat.com, Sofascore.com
-- **Arquitecturas**: Investigación en RNNs para predicción deportiva
-- **Benchmarks**: Literatura académica en predicción de tenis
 
 
