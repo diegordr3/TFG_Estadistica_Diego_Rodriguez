@@ -21,8 +21,8 @@ Este proyecto de Trabajo Final de Grado (TFG) desarrolla un sistema de predicci�
 ### 1. Recolección de Datos (`1.ranking.py`, `2.scrapper.py`)
 
 - **Rankings ATP**: Obtención de rankings históricos desde la API de Matchstat mediante CloudScraper
-- **Datos de partidos**: Web scraping de resultados, estadísticas y odds de apuestas
-- **Información de jugadores**: Edad, nacionalidad, superficie preferida
+- **Datos de partidos**: Web scraping de resultados, odds de apuestas e información contextual.
+- **Información de jugadores**: Edad, nacionalidad, altura, peso
 
 ### 2. Análisis Exploratorio (`3.analisis_descriptivo.ipynb`)
 
@@ -32,10 +32,9 @@ Este proyecto de Trabajo Final de Grado (TFG) desarrolla un sistema de predicci�
 
 ### 3. Preprocesamiento (`4.preprocesamiento.ipynb`)
 
-- **Limpieza de datos**: Eliminación de valores anómalos y partidos incompletos
 - **Transformaciones**: 
   - Rankings en escala logarítmica diferencial
-  - Normalización de probabilidades de apuesta (corrección del vigorish)
+  - Normalización de probabilidades de apuesta
   - Codificación de variables categóricas
 - **Estructuración temporal**: Organización en ventanas deslizantes
 
@@ -43,15 +42,12 @@ Este proyecto de Trabajo Final de Grado (TFG) desarrolla un sistema de predicci�
 
 - **Arquitectura dual**: Modelo de clasificación y regresión
 - **Entrenamiento con ventanas temporales**: 143 ventanas de validación cruzada
-- **Transfer Learning**: Transferencia de pesos entre ventanas temporales
-- **Early Stopping**: Prevención de sobreajuste
 
 ### 5. Evaluación (`6.analisis_resultados.ipynb`)
 
-- **Métricas de clasificación**: Accuracy, Precision, Recall, F1-Score, AUC
-- **Métricas de regresión**: MAE, MSE, RMSE, R²
+- **Métricas de clasificación**: Accuracy, F1-Score, AUC
+- **Métricas de regresión**: MAE, RMSE, R²
 - **Análisis temporal**: Evolución del rendimiento por período
-- **Comparación con benchmarks**: Casas de apuestas
 
 ## Tecnologías Utilizadas
 
