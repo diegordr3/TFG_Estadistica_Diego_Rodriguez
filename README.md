@@ -73,6 +73,8 @@ Este proyecto de Trabajo Final de Grado (TFG) desarrolla un sistema de predicci�
 
 ### Prerrequisitos
 Necesario tener instalado Python 3.11.
+
+Instalación de librerías:
 ```bash
 pip install torch pandas numpy scikit-learn matplotlib seaborn requests cloudscraper rapidfuzz
 ```
@@ -98,7 +100,7 @@ pip install torch pandas numpy scikit-learn matplotlib seaborn requests cloudscr
 ## Contribuciones
 
 **Autor**: Diego Rodríguez  
-**Tutor**: Francisco Hernando Gallego
+**Tutor**: Francisco Hernando Gallego 
 **Institución**: Universidad de Valladolid
 
 
