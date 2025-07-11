@@ -99,8 +99,8 @@ pip install torch pandas numpy scikit-learn matplotlib seaborn requests cloudscr
 
 ## Contribuciones
 
-**Autor**: Diego Rodríguez  
-**Tutor**: Francisco Hernando Gallego 
+**Autor**: Diego Rodríguez  <br>
+**Tutor**: Francisco Hernando Gallego  <br>
 **Institución**: Universidad de Valladolid
 
 
